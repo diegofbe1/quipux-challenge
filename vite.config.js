@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/quipux-challenge/",
   plugins: [vue()],
   resolve: {
     alias: {
