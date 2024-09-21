@@ -1,0 +1,72 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+$custom-colors: (
+  "custom-dark-purple": #302634,
+  "custom-primary": #049ef4,
+  "custom-primary-light": #d8f1ff,
+  "custom-primary-dark": #00519e,
+  "custom-gray": #f8f9fa,
+  "custom-gray-dark": #555555,
+  "custom-gray-light": #c2c2c2,
+  "custom-green": #27a22d,
+);
+
+$custom-buttons: (
+  "custom-green-button": (
+    "border": 1px solid #28a745,
+    "color": #28a745,
+    "background-color": transparent,
+    "padding": 0 0.5rem,
+    "border-radius": 0.25rem,
+    "font-weight": 500,
+  ),
+);
+
+$custom-font-size: (
+  "14": 0.875rem,
+  "24": 1.5rem,
+  "48": 3rem,
+  "80": 5rem,
+);
+
+$custom-margin-bottom: (
+  "32": 2rem,
+  "40": 2.5rem,
+  "48": 3rem,
+);
+
+@each $color-name, $color-value in $custom-colors {
+  .bg-#{$color-name} {
+    background-color: $color-value;
+  }
+  .text-#{$color-name} {
+    color: $color-value;
+  }
+  .border-#{$color-name} {
+    border: 1px solid $color-value;
+  }
+  .border-right-#{$color-name} {
+    border-right: 1px solid $color-value;
+  }
+}
+
+@each $btn-name, $btn-styles in $custom-buttons {
+  .btn-#{$btn-name} {
+    @each $property, $value in $btn-styles {
+      #{$property}: $value;
+    }
+  }
+}
+
+@each $size-name, $size-value in $custom-font-size {
+  .fs-#{$size-name} {
+    font-size: $size-value !important;
+  }
+}
+
+@each $mb-name, $mb-value in $custom-margin-bottom {
+  .mb-#{$mb-name} {
+    margin-bottom: $mb-value !important;
+  }
+}
