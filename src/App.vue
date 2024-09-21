@@ -28,9 +28,6 @@ const componentToRender = shallowRef(contentComponents.home)
 const changeComponent = (component) => {
   componentToRender.value = contentComponents[component]
 }
-
-console.log(componentToRender.value)
-
 </script>
 
 <template>

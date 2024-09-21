@@ -19,7 +19,6 @@ const props = defineProps({
   selectedMenu: String
 });
 
-console.log(props.selectedMenu);
 </script>
 
 
